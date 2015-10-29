@@ -1,0 +1,31 @@
+#logo{
+	height: 50px;
+	width: 250px;
+}
+
+
+#barradenav{
+	background-color: #159957;
+    background-image: linear-gradient(120deg, #155799, #159957);
+    border-radius: 0px;
+    border:0px !important;
+
+}
+
+a{	
+	color: #FFFFFF !important;
+	font-family: Helvetica;
+}
+
+a:hover{
+	background-color: #C3BDBD !important;
+}
+
+ul{
+	float: none !important;
+}
+
+#letra{
+	font-family: Helvetica;
+	
+}
