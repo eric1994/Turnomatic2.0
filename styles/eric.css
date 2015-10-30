@@ -17,6 +17,7 @@ a{
 	font-family: Helvetica;
 }
 
+
 a:hover{
 	background-color: #C3BDBD !important;
 }
@@ -28,4 +29,32 @@ ul{
 #letra{
 	font-family: Helvetica;
 	
+}
+label{
+	color: #FFFFFF;
+	padding-top: 15px;
+    font-weight: normal;
+}
+
+input{
+	margin-top: 15px !important;
+    width: 100px !important;
+    height: 26px !important;
+    display: inline-block !important;
+}
+
+.derecha{
+	float: right;
+}
+
+#esp{
+	margin-left: 1em;
+}
+
+#env{
+	font-weight: bold;
+	height: 25px;
+	font-size: 9px;
+	/*background-color: #6E64BE;*/
+	margin-left: 1em;
 }

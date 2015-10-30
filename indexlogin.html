@@ -38,11 +38,36 @@
 			
 				  <ul class="nav navbar-nav">
 					<li class=" col-md-1 col-md-offset-1"><a href="index2.html">Home</a></li>
-					<li class="col-md-1"><a href="#">Listas</a></li>
-					<li  id="open_close" class="col-md-1"><a href="#">Login</a></li>
-					<li><a href="#">Registro</a></li> 
-				 </ul>
+					<!-- <li class="col-md-1"><a href="#">Listas</a></li> -->
+					<!-- <li  id="open_close" class="col-md-1"><a href="#">Login</a></li> -->
+					<!-- <li><a href="#">Registro</a></li>  -->
+				 	<div class="derecha">
+				 	 <form  action="index2.html">
+						 <label for="Nombre">Nombre:</label>
+					     <input type="text" Name="nombre" class="form-control" id="nombre" placeholder="Nombre:" required>
+					     <label for="Contrasena" id="esp"> Contraseña:</label>
+					     <input type="password" Name="password" class="form-control" id="password" placeholder="Contraseña:">
+					     <!-- QUEDA FEO A VER SI SE PUEDE HACER UN ONCLICK DIRECTO CON JAVASCRIPT <button class="btn btn-primary" type="submit" id="env">Enviar</button> -->
+					     <script type="text/javascript"> 
+						     $('#password').keypress(function (e) {
 
+						       if (e.keyCode == 13) {
+						       	var nom = $('#nombre').val()
+						       	 if ( nom == ''){
+						       	 	alert("Introduzca nombre");
+						       	 }
+
+						       	 else{
+						         var text = $('#password').val();
+						         window.location="index2.html";
+						         }
+						         // $('#password').val('');
+						       }
+						     });
+					    </script>
+				    </div>
+				    </form>
+			     	</ul>
 
 <!-- INCORPORAR DROP, si interesa 
 
@@ -79,7 +104,7 @@
 
 	<!-- login desplegable -->
 
-	<div id="login">
+<!-- 	<div id="login">
 		<div class="container">
 		   <div class="row">
 			<form action="index2.html" method="get">
@@ -92,7 +117,7 @@
 	       </div>
 	     </div>
      </div>
-
+ -->
 
 	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 	 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
