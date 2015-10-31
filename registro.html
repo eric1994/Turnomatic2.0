@@ -38,21 +38,12 @@
 		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 			
 				  <ul class="nav navbar-nav">
-					<li><a href="index2.html">Home</a></li>
-					<li><a href="registro.html">Registro</a></li> 
+					<li><a href="indexlogin.html">Home</a></li>
+					<li><a href="#">Registro</a></li> 
 					<!-- <li  id="open_close" class="col-md-1"><a href="#">Login</a></li> -->
-					<!-- <li><a href="#">Registro</a></li>  -->
-				 	<div class="derecha">
-				 	 <form  name="loginform" action="" onsubmit="return Login()">
-						 <label for="Nombre">Email:</label>
-					     <input type="text" Name="email2" class="form-control" id="inputemail2" placeholder="Nombre:">
-					     <label for="Contrasena" id="esp"> Contraseña:</label>
-					     <input type="password" Name="password2" class="form-control" id="inputpwd2" placeholder="Contraseña:">
-					     <button class="btn btn-primary" type="submit" id="env">Login</button> 
-					 
-				    </div>
-				    </form>
+					<!-- <li><a href="#">Registro</a></li>  -->		
 			     	</ul>
+					
 
 <!-- INCORPORAR DROP, si interesa 
 
@@ -86,22 +77,28 @@
 		</div>
 	  </div>
 	</nav>
+	<div class="container">
+	<div class="row">
+		 	 <form  name="registerform" action="" onsubmit="return Registro()">
+						 <label for="Nombre">Email:</label>
+						 <div class="form-group">
+					     <input type="text" Name="email" class="form-control" id="inputemail" placeholder="Nombre:">
+						 </div> 
+					     <label for="Contrasena" id="esp"> Contraseña:</label>
+						 <div class="form-group">
+					     <input type="password" Name="password" class="form-control" id="inputpwd" placeholder="Contraseña:">
+						 </div>
+						 <br>
+					     <button class="btn btn-primary" type="submit" id="env">Registro</button> 
+					 
+				    </form>
+				</div>	
+		</div>
+		</div>
 
 	<!-- Registro desplegable -->
 
-<div id="login">
-		<div class="container">
-		   <div class="row">
-			<form action="index2.html" method="get">
-				<label for="Nombre" class="col-md-offset-3">Nombre de usuario:</label>
-			    <input type="text" Name="nombre" id="nombre" placeholder="Nombre:">
 
-			    <label for="Contrasena"> Contraseña:</label>
-			    <input type="password" Name="password" id="password" placeholder="Contraseña:">
-	    	 </form>
-	       </div>
-	     </div>
-     </div>
 
      <script src="js/login.js"></script>
 	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
