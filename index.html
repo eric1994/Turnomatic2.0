@@ -1,20 +1,235 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" ng-app="myApp" ng-controller="customersCtrl">
 <head>
-	<meta charset="UTF-8">
-	<title>SIPC</title>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-    <link rel="stylesheet" href="styles/style.css">
-    <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
-    <link rel="stylesheet" href="styles/animate.css">
-
+  <meta charset="UTF-8">
+  <title>Eric</title>
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles/stylereg2.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+   <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+  <script src="js/validation.js"></script>
+  <script src="js/Mycontroler.js"></script>
+  <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
 </head>
+
 <body>
 
-	<section>
-		<div class="container">
-			<a href="index2.html"><img src="img/logo.png" class="animated slideInDown" alt="imagen" id="imagensita">
-		</div>
-	</section>
+<ul class="nav nav-tabs" id="tab">
+      <li class="active"><a data-toggle="tab" href="#primert">Home</a></li>
+      <li><a data-toggle="tab" href="#regis">Registro Firebase</a></li>
+      <li><a data-toggle="tab" href="#angular">Angular</a></li>
+      <li><a data-toggle="tab" href="#firebase">Chat Firebase</a></li>
+     <li><a data-toggle="tab" href="#json">Json</a></li>
+
+</ul>
+
+
+ <div class="tab-content">
+
+ <div id="primert" class="tab-pane fade in active">
+  <header>
+  <div class="container">
+      <h1>Proyecto EmprendeApp</h1>
+  </div>
+  </header>
+
+
+
+  
+  <div class="container">
+  <section class="main row">
+   <article class="col-md-12 tab-pane fade in active">
+    
+      <h3> ¿Te gustaría crear una App Web con algunos de nuestros profesionales? </h3>
+      <p> EmprendeApp te ofrece la oportunidad de crear una App Web con nosotros, solo tienes que registrarte y ofrecernos datos sobre la App que deseas crear y nosotros nos encargaremos de contactar contigo tontalmente gratiutamente y darte la oportunidad de aprender y disfrutar trabajando en la App de tus sueños, no lo pienses más y registrate </p>
+  
+      <img src="img/proyecto.jpg" class="col-md-4 tab-pane fade in active" alt="proyect" id="logo"> 
+      <img id="node" src="img/node.png" alt="node tab-pane fade in active" class="col-md-4">
+
+
+    </article>
+    </div>
+</div>
+
+
+
+  <div id="regis"  class="tab-pane fade">
+    
+    <aside> 
+    <form method="post" action="index.html">
+      <div class="container">
+        <h3 id="registro">Registrarse</h3>
+       
+        <div class="row col-md-12">
+        
+        <div class="form-group form-inline centrar-formulario">
+          <label for="Nombre" class="formulario col-md-2">Nombre de usuario:</label>
+          <input type="text" class="form-control separar-input col-md-4" Name="nombre" id="nombre" placeholder="Nombre:" ng-model="nombre">
+        </div>
+        </div>
+       
+
+        <div class="row">
+        <div class="form-group form-inline centrar-formulario">
+          <label for="Email" class="formulario-esp formulario col-md-2">Email:</label>
+          <div class="input-group separar-input-especial">
+          <div class="input-group-addon">@</div>
+          <input type="text" class="form-control" id="email" Name="email" placeholder="Email:" ng-model="email">
+          </div>
+        </div>
+        </div>
+      
+        <div class="row">
+        <div class="form-group form-inline centrar-formulario">
+        <label for="Contrasena" class="formulario col-md-2">Contraseña:</label>
+        <input type="password" class="form-control separar-input" Name="password" id="password" placeholder="Contraseña:" ng-model="contra">
+        </div>
+        </div>
+
+         <div class="row">
+         <div class="form-group form-inline centrar-formulario">
+        <label for="Confirmar" class="formulario col-md-2">Confirmar Contraseña:</label>
+        <input type="password" class="form-control separar-input" Name="Confirmar" id="Confirmar" placeholder="Contraseña:">
+        </div>
+        </div>
+
+        <div class="row">
+         <div class="form-group form-inline centrar-formulario">
+        <label for="genero" class="formulario col-md-2">Género:</label>
+        Hombre
+        <input type="radio" class="radio" id="genero" name="genero" value="Hombre" id="Genero">
+        &nbsp;&nbsp;&nbsp;Mujer
+        <input type="radio" class="radio" id="genero" name="genero" value="Mujer" id="Genero">
+        </div>
+        </div>
+
+
+        <div class="row">
+         <div class="form-group form-inline centrar-formulario">
+        <label for="Fecha de nacimiento" class="formulario col-md-2">Fecha de nacimiento:</label>
+        <select name="mes" id="mes" class="form-control">
+          <option value="Enero">Enero</option>
+          <option value="Febrero">Febrero</option>
+          <option value="Marzo">Marzo</option>
+          <option value="Abril">Abril</option>
+          <option value="Mayo">Mayo</option>
+          <option value="Junio">Junio</option>
+          <option value="Julio">Julio</option>
+          <option value="Agosto">Agosto</option>
+          <option value="Septiembre">Septiembre</option>
+          <option value="Octubre">Octubre</option>
+          <option value="Noviembre">Noviembre</option>
+          <option value="Diciembre">Diciembre</option>
+        </select>
+        <select name="dia" id="dia" class="form-control">
+          <script> 
+            var dia = 31;
+            for(a=1;a<=dia;a++){ 
+            document.write('<option value="'+a+'">'+a+'</option>'); 
+            } 
+          </script> 
+          </select> 
+          <select name="age" id="age" class="form-control">
+          <script> 
+            var anio = 1930;
+            for(a=2015;a>=anio;a--){ 
+            document.write('<option value="'+a+'">'+a+'</option>'); 
+            } 
+          </script>
+          </select> 
+        </div>
+        </div>
+
+         
+        <button id="boton" class="btn btn-primary centrar-boton" type="submit">Registrarse</button> 
+         <script>
+
+            // $('#boton').click(function(){
+            //   var email = $('#email').val();
+            //   var password = $('#password').val();
+            //   var nombre = $('#nombre').val();
+            //   var mes = $('#mes').val();
+            //   var dia = $('#dia').val();
+            //   var age = $('#age').val();
+            //   var genero =$('#genero').val();
+
+
+                    var ref = new Firebase('https://logineric.firebaseio.com/');
+                     var fireRef = ref.child('lalo');
+                     var emailRef = fireRef.child('lalo');
+                     var path = emailRef.toString();
+                     var url = new Firebase(path);
+
+                     url.once('value', function(snap) {console.log(snap.val())});
+
+
+                      ref.child('nomb').set({
+                        date_of_birth: 'eric',
+                        full_name: 'lalo'
+                      });
+                    
+             
+                              
+        </script>
+        </form>
+      </div>
+      </div>
+      </aside>
+
+<div id="angular" class="tab-pane fade">
+      <div class="ultimo" id="ultimo">
+      <h3> Tu nombre es: {{ nombre }} </h3>
+      <h3> Tu email: {{ email }} </h3>
+      <h3> Tu contraseña: {{ contra }} </h3>
+      <h3> Tu localización: {{ localizacion }} </h3>
+      </div>
+  </div>
+
+
+<div id="firebase" class="tab-pane fade">
+  <div id='messagesDiv'></div>
+      <input type='text' id='nameInput' placeholder='Name'>
+      <input type='text' id='messageInput' placeholder='Message'>
+      <script>
+        var myDataRef = new Firebase('https://chateric2015.firebaseio.com//');
+        $('#messageInput').keypress(function (e) {
+          if (e.keyCode == 13) {
+            var name = $('#nameInput').val();
+            var text = $('#messageInput').val();
+            myDataRef.push({name: name, text: text});
+            $('#messageInput').val('');
+          }
+        });
+        myDataRef.on('child_added', function(snapshot) {
+          var message = snapshot.val();
+          displayChatMessage(message.name, message.text);
+        });
+        function displayChatMessage(name, text) {
+          $('<div/>').text(text).prepend($('<em/>').text(name+': ')).appendTo($('#messagesDiv'));
+          $('#messagesDiv')[0].scrollTop = $('#messagesDiv')[0].scrollHeight;
+        };
+      </script>
+</div>
+
+
+
+
+<div id="json" class="tab-pane fade">
+  <div class="container">
+    <h1>PLAYAS DE TENERIFE</h1>
+    <ul class="list-unstyled">
+      <li ng-repeat="x in names">
+        {{ x.ows_LinkTitle + ', ' + x.ows_Zona }}
+      </li>
+    </ul>
+  </div>
+</div>
+
+
+
+
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+  
 </body>
 </html>
