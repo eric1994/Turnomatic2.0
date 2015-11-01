@@ -57,7 +57,7 @@ ref.createUser({
   } else {
     console.log("Successfully created user account with uid:", userData.uid);
 	alert("Usuario registrado exitosamente:")
-		ref.push({Nombre: nombre1, Email: email1, Sexo: sexo1, Dia: dia1, Mes: mes1, Año: anio1});
+		userRef.push({Nombre: nombre1, Email: email1, Sexo: sexo1, Dia: dia1, Mes: mes1, Año: anio1});
 	window.open("registro.html", "_self")
 	
   }
@@ -125,3 +125,4 @@ function Login() {
 
 
 var ref = new Firebase("https://turbomatic2.firebaseio.com");
+var userRef = ref.child("users");
