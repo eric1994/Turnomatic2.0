@@ -9,6 +9,10 @@ Implementar una página web capaz de gestionar las colas de un determinado sitio
 	
 
 #Necesario
+
+	? -> en proceso 
+	ok -> do it 
+
 - Prepágina *opcional*   **Eric ok**
 - Interfaz de registro + infomación de la página    **Lucas ?** 
 - Login funcional   **Mauricio ok**
@@ -16,12 +20,7 @@ Implementar una página web capaz de gestionar las colas de un determinado sitio
 - Interfaz servidor  
 - Navbar   **Eric ok**
 - Implementar funcionalidad con la base de datos para actualizar datos en tiempo real
-
-
-
-        ? -> en proceso 
-        ok -> do it 
-
+- Footer *opcional easy*
 
 
 #Desarrollado
