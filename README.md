@@ -15,9 +15,7 @@ Implementar una página web capaz de gestionar las colas de un determinado sitio
 - Interfaz principal (usuario)   **Alexis ?**
 - Interfaz servidor  
 - Navbar   **Eric ok**
-- Footer *opcional, easy*
 - Implementar funcionalidad con la base de datos para actualizar datos en tiempo real
-
 
 
 
