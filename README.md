@@ -19,6 +19,8 @@ Implementar una página web capaz de gestionar las colas de un determinado sitio
 - Implementar funcionalidad con la base de datos para actualizar datos en tiempo real
 
 
+
+
         ? -> en proceso 
         ok -> do it 
 
