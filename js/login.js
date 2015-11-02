@@ -37,8 +37,6 @@ bandera=1;
 		}
 		if (bandera==1)
 		return false;
-		else
-		{
 		var nombre1 = $('#inputnombre').val();
         var email1 = $('#inputemail').val();
 		var password1 = $('#inputpwd').val();
@@ -46,7 +44,20 @@ bandera=1;
 		var mes1 = $('#mes').val();
 		var dia1 = $('#dia').val();
 		var anio1 = $('#age').val();
-ref.createUser({
+		 userRef
+		.orderByChild('Nombre')
+      .startAt(nombre)
+    .endAt(nombre)
+	 .once('value', show);
+	 function show(snap) {
+	 if(snap.val()!=null)
+	 {
+   alert("Ya existe un usuario con ese nombre");
+   return false; 
+   }
+     else
+	  {
+	  ref.createUser({
   email    : email1,
   password : password1
 }, function(error, userData) {
@@ -62,10 +73,14 @@ ref.createUser({
 	
   }
 })
+	  
+	  }
+}
+
  return false;  
 
 		
-		}
+		
 	
 }
 
