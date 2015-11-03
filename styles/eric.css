@@ -30,13 +30,14 @@ ul{
 	font-family: Helvetica;
 	
 }
-label{
+
+.labelinput{
 	color: #FFFFFF;
 	padding-top: 15px;
     font-weight: normal;
 }
 
-input{
+.navinput{
 	margin-top: 15px !important;
     width: 200px !important;
     height: 26px !important;
