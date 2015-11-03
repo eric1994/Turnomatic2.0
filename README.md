@@ -17,7 +17,9 @@ Implementar una página web capaz de gestionar las colas de un determinado sitio
 - Interfaz de registro + infomación de la página    **Lucas ?** 
 - Login funcional   **Mauricio ok**
 - Interfaz principal (usuario)   **Alexis ?**
-- Interfaz servidor  
+- Interfaz servidor
+- Cookies
+- Portabilidad a hosting  
 - Navbar   **Eric ok**
 - Implementar funcionalidad con la base de datos para actualizar datos en tiempo real
 - Footer *opcional easy*
