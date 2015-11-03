@@ -1,0 +1,50 @@
+   
+
+   label{
+      color:white;
+      cursor: pointer;
+      font-size: 18px;
+      font-family: Helvetica;
+   }
+
+   label:hover
+   {
+      color:red;
+      cursor: pointer;
+      font-size: 18px;
+   }
+
+    input{
+      background: white;
+      font-weight: inherit;
+
+      border-radius: 10px;
+      color:pointer;
+      padding: 5px 5px;
+
+   }
+
+   
+
+ .alinear{
+
+   text-align: left;
+
+ }
+
+ 
+   .estilo_caja{
+   background: #159957;
+   background-image: linear-gradient(120deg, #155799, #159957);
+   width: 500px;
+   box-shadow: 10px 10px 10px #000;
+   margin-top: 150px;
+   
+   border-radius: 10px;
+   border-left-style: 3px;
+      
+
+}
+
+
+   
