@@ -2,18 +2,20 @@
 	text-align: center;
 }
 
+.texto-principal  h1{font-size: 45px; color:#ffffff; font-family:Impact, Charcoal, sans-serif; text-align:left; padding-top:5px;}
+.texto-pasos {color:#ffffff;}
+.empresa{background: #ffff00;
+box-shadow: -4px 0 2px -2px rgba(0,0,0,0.4)
+
+}
 
 
 body{
-	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f7fbfc+0,7bf2ab+40,add9e4+100 */
-	background: #f7fbfc; /* Old browsers */
-	background: -moz-linear-gradient(-45deg, #f7fbfc 0%, #7bf2ab 40%, #add9e4 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#f7fbfc), color-stop(40%,#7bf2ab), color-stop(100%,#add9e4)); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(-45deg, #f7fbfc 0%,#7bf2ab 40%,#add9e4 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(-45deg, #f7fbfc 0%,#7bf2ab 40%,#add9e4 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(-45deg, #f7fbfc 0%,#7bf2ab 40%,#add9e4 100%); /* IE10+ */
-	background: linear-gradient(135deg, #f7fbfc 0%,#7bf2ab 40%,#add9e4 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7fbfc', endColorstr='#add9e4',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1e689a+0,7ec8e8+89&1+0,1+93,0.7+98,0+100 */
+background: -moz-linear-gradient(top, rgba(30,104,154,1) 0%, rgba(126,200,232,1) 89%, rgba(126,200,232,1) 93%, rgba(126,200,232,0.7) 98%, rgba(126,200,232,0) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, rgba(30,104,154,1) 0%,rgba(126,200,232,1) 89%,rgba(126,200,232,1) 93%,rgba(126,200,232,0.7) 98%,rgba(126,200,232,0) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, rgba(30,104,154,1) 0%,rgba(126,200,232,1) 89%,rgba(126,200,232,1) 93%,rgba(126,200,232,0.7) 98%,rgba(126,200,232,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e689a', endColorstr='#007ec8e8',GradientType=0 ); /* IE6-9 */
 	height: 100%;
 	width: 100%;
 	margin: 0;
@@ -30,3 +32,4 @@ img{
 	margin-left: 27%;
 	margin-top: 15%;
 }
+
