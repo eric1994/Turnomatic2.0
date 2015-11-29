@@ -1,0 +1,63 @@
+
+body {
+	background: no-repeat center center fixed;
+	background-image: linear-gradient(180deg, #5F75AD, #41C1C1);
+	background-size: cover !important ;
+	width: 100%;
+	height: 100%;
+}
+
+#turno {
+	color:white;
+	font-size: 3.5em;
+	font-family: 'Old Standard TT', cursive;
+}
+
+#reg {
+	color:white;
+	font-family: 'Old Standard TT';
+	font-weight: bold;
+}
+#texto {
+	color: white;
+	font-family: 'Old Standard TT';
+	font-size: 1.5em;
+	/*font-weight: bold;*/
+}
+
+#boton1{
+	height: 3em !important;
+	width: 10em !important;
+	margin-top: 2.3em !important;
+}
+
+.text {
+	
+	font-family: 'Old Standard TT';
+	color: white;
+	font-size: 1.5em;
+
+}
+
+#texto1 {
+	
+	font-family: 'Old Standard TT';
+	color: white;
+	font-weight: bold;
+	margin-top: -20px;
+	
+}
+input {
+	margin-top: 10px !important;
+	border-radius: 10px !important;
+	width: 20em !important;
+	margin-left: 
+}
+
+#texto2 {
+	margin-top: -50px;
+	font-family: 'Old Standard TT';
+	color: white;
+	margin-left: 15px;
+	font-weight: bold;
+}

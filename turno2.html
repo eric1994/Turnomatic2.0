@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>	Registro</title>
+</head>
+<meta charset="UTF-8">
+	<title>SIPC</title>
+	<link rel="stylesheet" href="https://www.google.com/fonts#QuickUsePlace:quickUse/Family:Old+Standard+TT:400,400italic">
+	<link rel="stylesheet" href="styles/styleregem.css" type="text/css">
+	<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<script src="jquery.js"></script>
+	<script type="text/javascript" src="js/var.js"></script>
+	
+<body >
+	<div class="container"> 
+		<div class="row">
+			<div class="col-md-12">
+				<h1 id="turno"> Turnomatic</h1>
+			</div>
+		</div>
+
+
+		<div class="row">
+			<div class="col-md-5 col-md-offset-1">
+				<h2 id="reg">¡Registre su empresa!</h2>
+			</div>
+		</div>
+
+		<div class="row">
+
+			<p id="texto" class="col-md-7 col-md-offset-1">¡Comienze ahora mismo a dar todas </br>las comunidades a sus clientes o usuarios! </p>
+
+		</div>
+
+		
+		<div class="row">
+			<div class="col-md-3 col-md-offset-5">
+				<img src="img/mun.png">
+			</div>
+		</div>
+
+
+
+		
+	
+				</br>
+				<form role="form" method="get" onsubmit="return comprobarClave();" >
+					<div class="row">
+						<div class="col-md-offset-2 col-md-4">
+		  					<input  class="form-control" type="text" name="email"   id="email" placeholder="email(será tu nombre de usuario)" ></input>
+		  					<input  class="form-control" type="text" name="cemail"   id="cemail" placeholder="confirmar email" ></input>
+		  					<input type="text" class="form-control"  name="nombre" id="nombre" placeholder="nombre"></input>
+						</div>
+							
+						<div class="col-md-4">
+								<input class="form-control" type="password" id="clave" placeholder="contraseña" ></input>
+								<input type="password" class="form-control" name="clave2" id="clave2" placeholder="confirmar contraseña"></input>
+								<input class="form-control" type="text" id="lugar" placeholder="lugar"></input>
+						</div>
+							
+			
+						<!-- 
+						<div class="col-md-3">
+							<h3 class="text">Los usuarios lo verán con este nombre</h3>
+							<h3 class="text">Los usuarios podrán buscarlos por esta dirección</h3>
+						</div> -->
+					
+						</br>
+						
+					</div>
+				</form>
+
+				<div class="row">
+					<input type="submit"  id="boton1" name="btn_enviar" class="col-md-offset-5 btn btn-success" value="¡Crear cuenta!" >
+				</div>
+											
+							
+
+					<!-- <div class="col-md-6 col-md-offset-6">
+						<h4 id="texto2">¿Y ahora qué?</h4></br><p id="texto1">Recibira en el email que ha facilitado nuestras indicaciones sobre como y</br> que documentos debe hacernos llegar para que la empresa o institución </br> existe y que cumple con todos los requisitos legales.Una vez hallado</br> la documentación y comprobamos su integridad volveremos a </br>contactarle para anunciarle que ya puede dar el servicio a sus </br>clientes.Generalmente el proceso no tardará mas de 7 dias</br> naturales</p>
+					</div> -->
+					
+			
+			
+	</div>
+
+</body>
+</html>

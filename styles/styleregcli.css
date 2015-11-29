@@ -1,0 +1,43 @@
+
+body {
+	background: no-repeat center center fixed;
+	background-image: linear-gradient(180deg, #5F75AD, #41C1C1);
+	background-size: cover !important ;
+	width: 100%;
+	height: 100%;
+}
+
+#turno {
+	color:white;
+	font-size: 3.5em;
+	font-family: 'Old Standard TT', cursive;
+}
+
+img{
+	height: 100px;
+	width: 100px;
+}
+
+#reg {
+	color:white;
+	font-family: 'Old Standard TT';
+	font-weight: bold;
+}
+#texto {
+	color: white;
+	font-family: 'Old Standard TT';
+	font-size: 1.3em;
+	/*font-weight: bold;*/
+}
+
+#boton1{
+	height: 3em !important;
+	width: 10em !important;
+	margin-left: 5em;
+}
+input {
+	margin-top: 10px !important;
+	border-radius: 10px !important;
+	width: 20em !important;
+}
+
