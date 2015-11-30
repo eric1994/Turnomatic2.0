@@ -8,3 +8,77 @@ body{
 
 }
 
+
+article{
+	height: 39em;
+}
+
+
+aside{
+	height: 39em;
+}
+
+
+.caja{
+	margin-top: 9em;
+	height: 31em;
+	background: none repeat scroll 0 0 rgba(160, 224, 234, 0.2);
+    border-radius: 4px;
+    color: #FFF;
+    font-family: 'Open Sans',sans-serif;
+    padding: 5px 10px;
+    text-align: center;
+}
+
+
+#izq{
+	margin-top: 3em;
+	text-align: left;
+}
+
+
+#funciones{
+	margin-top: 6.3em !important;
+	color: #fff;
+	font-size: 1.3em;
+	font-family: 'Open Sans',sans-serif;
+}
+
+.scaja{
+		margin-top: 1em;
+		height: 18em;
+		background: none repeat scroll 0 0 rgba(160, 224, 234, 0.2);
+	    border-radius: 4px;
+	    color: #FFF;
+	    font-family: 'Open Sans',sans-serif;
+	    padding: 5px 10px;
+	    text-align: center;
+}
+
+.np{
+	margin-top: 4em;
+	width: 20em !important;
+}
+
+p{
+	text-align: left;
+	margin-left: 2em;
+}
+
+
+#centrado{
+	text-align: center;
+	font-size: 2em;
+	margin-right: 2em;
+}
+
+#numero{
+	text-align: center;
+	font-size: 6em;
+	margin-right: 2em;
+}
+
+.b2{
+	width: 7em !important;
+	height: 4em !important;
+}

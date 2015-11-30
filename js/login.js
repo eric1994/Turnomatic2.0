@@ -83,7 +83,7 @@ function Login() {
 						  		else {
 								    console.log("Authenticated successfully with payload:", authData);
 									alert("Login exitoso")
-									window.open("turno.html", "_self")
+									window.open("frontend_empresas.html", "_self")
 						  		}
 		  					},
 			  		{
