@@ -9,6 +9,7 @@ body{
 }
 
 
+
 article{
 	height: 39em;
 }
@@ -17,6 +18,8 @@ article{
 aside{
 	height: 39em;
 }
+
+
 
 
 .caja{
@@ -29,6 +32,8 @@ aside{
     padding: 5px 10px;
     text-align: center;
 }
+
+
 
 
 #izq{

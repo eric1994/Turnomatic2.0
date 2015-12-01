@@ -19,43 +19,31 @@
 						<div class="col-md-offset-1 col-md-10 caja">
 							</br>
 							</br>
-							<p>40 Personas en cola</p>
+							<p id="contador"></p>
 							<p id="centrado">Turno actual</p>
 							<p id="numero"></p>
 							<div class="row">
 								<button id="siguiente" class="btn btn-success b2">Siguiente</button>
 							</div>
 							<div class="row" id="izq">
-								<button class="col-md-offset-1 btn btn-warning">Atrás</button>
+								<a href="index.html"><button class="col-md-offset-1 btn btn-warning">Atrás</button></a>
 							</div>
 						</div>
 						
 					
 				</article>
-				<!-- 
-				<script>
-				timer = setTimeout('temporizador()', 4000);
-				$(document).ready(function() {
-				$("#numero").delay(1000),function(){
-				timer = setTimeout("temporizador()", 2000);
-				});
-				});
-				</script>
-				 -->
-<!-- 
-				<script>
-
-				    setInterval(function(){ alert("Hello"); }, 3000);
-
-				</script>
-
- -->
-
 				<script>
 					$(document).ready(function () {
 					    setInterval(function(){$('#numero').load('conexion.php'), 3000});
+					    setInterval(function(){$('#contador').load('contador.php'), 3000});
 					    $("#siguiente").click(function() {
 					      $.get("borrar.php");
+					    });	
+					    $("#reiniciar").click(function() {
+					      $.get("reiniciar.php");
+					    });	
+					    $("#deshacer").click(function() {
+					      $.get("deshacer.php");
 					    });	
 					});
 
@@ -66,8 +54,8 @@
 						</div>
 						<div class="row">
 							<div class="col-md-offset-1 col-md-8 scaja">
-								<button class="btn btn-danger np"> Reiniciar contador </button>
-								<button class="btn btn-danger np"> Deshacer Cambios</button>
+								<button id="reiniciar" class="btn btn-danger np"> Reiniciar contador </button>
+								<button id="deshacer" class="btn btn-danger np"> Deshacer Cambios</button>
 
 							</div>
 						</div>
