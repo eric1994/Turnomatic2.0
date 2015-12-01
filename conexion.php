@@ -1,5 +1,5 @@
 <?php
-
+$x = false;
 if (!$enlace = mysqli_connect("localhost","root","","usuario")) {
     echo 'No pudo conectarse a mysql';
     exit;
@@ -15,9 +15,17 @@ if (!$resultado) {
     exit;
 }
 
+
 while ($fila = mysqli_fetch_assoc($resultado)) {
+	$x=true;
     echo "<div id='act'>".$fila['num']."</div>";
 }
+
+if(!$x){
+		echo "<div id='act'>0</div>";
+}
+
+
 
 mysqli_free_result($resultado);
 

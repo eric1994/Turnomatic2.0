@@ -23,7 +23,7 @@
 							<p id="centrado">Turno actual</p>
 							<p id="numero"></p>
 							<div class="row">
-								<button class="btn btn-success b2">Siguiente</button>
+								<button id="siguiente" class="btn btn-success b2">Siguiente</button>
 							</div>
 							<div class="row" id="izq">
 								<button class="col-md-offset-1 btn btn-warning">Atrás</button>
@@ -54,7 +54,9 @@
 				<script>
 					$(document).ready(function () {
 					    setInterval(function(){$('#numero').load('conexion.php'), 3000});
-					    	
+					    $("#siguiente").click(function() {
+					      $.get("borrar.php");
+					    });	
 					});
 
 				</script>
@@ -65,7 +67,7 @@
 						<div class="row">
 							<div class="col-md-offset-1 col-md-8 scaja">
 								<button class="btn btn-danger np"> Reiniciar contador </button>
-								<button class="btn btn-danger np"> Establecer contador a 0</button>
+								<button class="btn btn-danger np"> Deshacer Cambios</button>
 
 							</div>
 						</div>
