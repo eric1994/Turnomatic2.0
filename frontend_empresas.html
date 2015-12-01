@@ -21,18 +21,43 @@
 							</br>
 							<p>40 Personas en cola</p>
 							<p id="centrado">Turno actual</p>
-							<p id="numero">5</p>
+							<p id="numero"></p>
 							<div class="row">
 								<button class="btn btn-success b2">Siguiente</button>
 							</div>
 							<div class="row" id="izq">
-								<button class="col-md-offset-1 btn btn-warning">Siguiente</button>
+								<button class="col-md-offset-1 btn btn-warning">Atrás</button>
 							</div>
 						</div>
 						
 					
 				</article>
+				<!-- 
+				<script>
+				timer = setTimeout('temporizador()', 4000);
+				$(document).ready(function() {
+				$("#numero").delay(1000),function(){
+				timer = setTimeout("temporizador()", 2000);
+				});
+				});
+				</script>
+				 -->
+<!-- 
+				<script>
 
+				    setInterval(function(){ alert("Hello"); }, 3000);
+
+				</script>
+
+ -->
+
+				<script>
+					$(document).ready(function () {
+					    setInterval(function(){$('#numero').load('conexion.php'), 3000});
+					    	
+					});
+
+				</script>
 				<aside class="col-md-6">
 					<div class="row">
 						<div class ="col-md-offset-1"id="funciones">Funciones especiales</div>
@@ -40,7 +65,6 @@
 						<div class="row">
 							<div class="col-md-offset-1 col-md-8 scaja">
 								<button class="btn btn-danger np"> Reiniciar contador </button>
-							
 								<button class="btn btn-danger np"> Establecer contador a 0</button>
 
 							</div>
@@ -49,5 +73,6 @@
 				</aside>
 		</div>
 	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 </body>
 </html>
