@@ -44,7 +44,7 @@
 
 		<div class="row">
 			<div  class="estilo_caja col-md-offset-5 "  >
-				<form name="registerform"  method="post" onsubmit="return Registro()">  <!-- onsubmit="return comprobarClave();" -->
+				<form name="registerform"  method="post" action="registro.php" onsubmit="return Registro()">  <!-- onsubmit="return comprobarClave();" -->
 					</br>
   					<input class="form-control" type="text" name="email" id="inputemail" placeholder="email(será tu nombre de usuario)">
   					<input  class="form-control" type="text" name="email2"   id="inputemail2" placeholder="confirmar email" >
@@ -57,6 +57,8 @@
 			</div>
 		</div>
 	</div>
-	<script src="js/login.js"></script>
+	
+
+	<script src="js/login_sql.js"></script>
 </body>
 </html>

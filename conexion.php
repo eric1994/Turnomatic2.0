@@ -1,32 +1,64 @@
 <?php
-$x = false;
-if (!$enlace = mysqli_connect("localhost","root","","usuario")) {
-    echo 'No pudo conectarse a mysql';
-    exit;
+
+class conexion{
+
+private $conexion; 
+private $server = "localhost"; 
+private $usuario = "root"; 
+private $pass = "";
+private $db = "usuarios"; 
+private $email ; 
+private $password;
+
+
+public function __construct(){
+
+	$this->conexion = new mysqli($this->server, $this->usuario, $this->pass, $this->db);
+
+	if($this->conexion->connect_errno){
+
+		die("Fallo al trratar de conectar con MySQL: (". $this->conexion->connect_errno.")");
+
+
+	}
 }
 
-mysqli_select_db($enlace,"usuario");
-$sql = "SELECT num FROM cola WHERE num >=ALL(SELECT num FROM cola)";
-$resultado = $enlace->query($sql);
+public function cerrar(){
 
-if (!$resultado) {
-    echo "Error de BD, no se pudo consultar la base de datos\n";
-    echo "Error MySQL: ' . mysql_error()";
-    exit;
+	$this->conexion->close();
+
 }
 
 
-while ($fila = mysqli_fetch_assoc($resultado)) {
-	$x=true;
-    echo "<div id='act'>".$fila['num']."</div>";
+public function login($usuario, $pass){
+
+	$this->email = $usuario;
+	$this->password = $pass;
+
+	$query = "select password from gusers where email = '".$this->email."'";
+
+	$consulta = $this->conexion->query($query);
+
+
+	if(hash_equals($consulta, crypt($this->password, $consulta))){
+
+		session_start();
+
+		$_session['nom'] = $row['email'];
+
+
+		echo "Has iniciado sesion"; 
+
+
+
+	}else {
+
+		echo "usuario o contraseña incorrectos"; 
+
+	}
+
 }
 
-if(!$x){
-		echo "<div id='act'>0</div>";
 }
-
-
-
-mysqli_free_result($resultado);
 
 ?>

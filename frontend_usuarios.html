@@ -29,7 +29,7 @@
 								<button id="siguiente" class="btn btn-success b2">Siguiente</button>
 							</div>
 							<div class="row" id="izq">
-								<form name="atras"  method="post" action="cerrarsesion.php">
+							<form name="atras"  method="post" action="cerrarsesion.php">
 								<input type="submit" button class="col-md-offset-1 btn btn-warning" id="close" value="Atrás"></button>
 								</form>
 							</div>
@@ -41,7 +41,7 @@
 					$(document).ready(function () {
 					    setInterval(function(){$('#numero').load('conexion.php'), 3000});
 					    setInterval(function(){$('#contador').load('contador.php'), 3000});
-						$("#usuario").load("sesion_empresa.php");
+						$("#usuario").load("sesion.php");
 					    $("#siguiente").click(function() {
 					      $.get("borrar.php");
 					    });	
