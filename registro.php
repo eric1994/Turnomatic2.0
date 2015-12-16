@@ -13,15 +13,17 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 } 
 
-$query = "set @var1= '$email'";
+	$stmt = $conn->prepare('SELECT * FROM usuarios WHERE email = ?');
+	
+	$stmt->bind_param('s', $email);
 
-$consulta1 = $conn->query($query);
+    $stmt->execute();
 
-$j = mysqli_query($conn,"SELECT * FROM usuarios WHERE email = @var1");
+$j =  $stmt->get_result();
  if( mysqli_num_rows($j) != 0){
 
  	echo '<script language="JavaScript">'; 
-	echo 'alert("Error. El email ya existe, vuelve a identificarte");'; 
+	echo 'alert("Error. El email ya existe, vuelva a identificarte");'; 
 	echo 'window.location = "registro_usuarios.html"';
 	echo '</script>';
 }
@@ -38,8 +40,11 @@ $salt = sprintf("$2a$%02d$", $cost) . $salt;
 
 $hash = crypt($contra, $salt);
 
-$sql = "INSERT INTO usuarios (password, email) VALUES ('$hash', @var1)";
-if ($conn->query($sql) === TRUE) {
+$stmt= $conn->prepare("INSERT INTO usuarios VALUES (?, ?)");
+$stmt->bind_param('ss', $email, $hash);
+$resultado2= $stmt->execute();
+
+if ($resultado2 === TRUE) {
     echo '<script language="JavaScript">';
     echo 'window.location="index.html"</script>';
 

@@ -15,16 +15,18 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 } 
 
-$query = "set @var1= '$email'";
+$stmt = $conn->prepare('SELECT * FROM empresas WHERE email = ?');
+	
+	$stmt->bind_param('s', $email);
 
-$consulta1 = $conn->query($query);
+    $stmt->execute();
 
-$j = mysqli_query($conn,"SELECT * FROM empresas WHERE email = @var1");
+$j =  $stmt->get_result();
  if( mysqli_num_rows($j) != 0){
 
  	echo '<script language="JavaScript">'; 
-	echo 'alert("Error. La empresa ya existe, vuelve a identificarte");'; 
-	echo 'window.location = "registro.html"';
+	echo 'alert("Error. La empresa ya existe, vuelva a identificarte");'; 
+	echo 'window.location = "registro_empresas.html"';
 	echo '</script>';
 }
 else{
@@ -40,16 +42,11 @@ $salt = sprintf("$2a$%02d$", $cost) . $salt;
 
 $hash = crypt($contra, $salt);
 
-$query2 = "set @var2= '$name'";
+$stmt= $conn->prepare("INSERT INTO empresas VALUES (?, ?, ?, ?)");
+$stmt->bind_param('ssss', $name, $email, $hash, $place);
+$resultado2= $stmt->execute();
 
-$consulta2 = $conn->query($query2);
-
-$query3 = "set @var3= '$place'";
-
-$consulta3 = $conn->query($query3);
-
-$sql = "INSERT INTO empresas (password, email, nombre, lugar) VALUES ('$hash', @var1, @var2, @var3)";
-if ($conn->query($sql) === TRUE) {
+if ($resultado2 === TRUE) {
     echo '<script language="JavaScript">';
     echo 'window.location="index.html"</script>';
 

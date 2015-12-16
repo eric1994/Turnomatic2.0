@@ -30,16 +30,16 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 } 
+	
+	$stmt = $conn->prepare('select password, email from usuarios where email = ?');
+	
+	$stmt->bind_param('s', $email);
 
-	$query = "set @var1= '$email'";
-
-	$consulta1 = $conn->query($query);
+    $stmt->execute();
 	
-	$query2= "select password, email from usuarios where email = @var1";
+	$consulta = $stmt->get_result();
 	
-	$consulta2 = $conn->query($query2);
-	
-    $resultado = mysqli_fetch_assoc($consulta2);
+    $resultado = mysqli_fetch_assoc($consulta);
 
 	if(hash_equals($resultado['password'], crypt($contra, $resultado['password']))){
 
@@ -56,17 +56,17 @@ if ($conn->connect_error) {
 
 
 	}else
+	{
 
+	$stmt = $conn->prepare('select nombre, password, email from empresas where email = ?');
 	
-$query = "set @var1= '$email'";
+	$stmt->bind_param('s', $email);
 
-	$consulta1 = $conn->query($query);
+    $stmt->execute();
 	
-	$query2= "select nombre, password, email from empresas where email = @var1";
+	$consulta = $stmt->get_result();
 	
-	$consulta2 = $conn->query($query2);
-	
-    $resultado = mysqli_fetch_assoc($consulta2);
+    $resultado = mysqli_fetch_assoc($consulta);
 	
 	if (hash_equals($resultado['password'], crypt($contra, $resultado['password'])))
 	{
@@ -90,6 +90,7 @@ $query = "set @var1= '$email'";
 
 		echo "usuario o contraseña incorrectos"; 
 
+	}
 	}
 
 
