@@ -23,7 +23,7 @@ $j =  $stmt->get_result();
  if( mysqli_num_rows($j) != 0){
 
  	echo '<script language="JavaScript">'; 
-	echo 'alert("Error. El email ya existe, vuelva a identificarte");'; 
+	echo 'alert("Error. El email ya existe, vuelve a identificarte");'; 
 	echo 'window.location = "registro_usuarios.html"';
 	echo '</script>';
 }
